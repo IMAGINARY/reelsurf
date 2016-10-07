@@ -39,7 +39,10 @@ else
         $extension = '.jpg';
 }
 
-$img_filename_rel = exec( "mktemp --tmpdir=pics \"{$surface_name}_tiles_{$stepsY}x{$stepsX}_XXXXXX{$extension}\"" );
+// make sure the 'pics' dir is writable
+$img_filename_rel = exec( "mktemp -p pics \"{$surface_name}_tiles_{$stepsY}x{$stepsX}_XXXXXX\"" );
+exec( "mv {$img_filename_rel} {$img_filename_rel}{$extension}" );
+$img_filename_rel = "{$img_filename_rel}{$extension}";
 $img_filename_abs = exec( "readlink -f \"{$img_filename_rel}\"" );
 $cmd_line = "bash createanim.sh {$compression} {$img_filename_abs} --size {$size} --minXAngle {$minXAngle} --maxXAngle {$maxXAngle} --stepsX {$stepsX} --minYAngle {$minYAngle} --maxYAngle {$maxYAngle} --stepsY {$stepsY} --quality {$quality} \"{$_FILES['jsurffile']['tmp_name']}\"";
 exec( $cmd_line );
