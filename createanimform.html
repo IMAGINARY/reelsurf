@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Surfer2jQueryReel</title>
+	</head>
+	<body>
+		<form action="createanim.php" method="POST"  enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td>.jsurf file:</td>
+					<td><input name="jsurffile" type="file" size="40" maxlength="100000" /></td>
+				</tr>
+				<tr>
+					<td>width and height of a tile:</td>
+					<td><input type="text" value="64" size="4" maxlength="4" name="size" /></td>
+				</tr>
+				<tr>
+					<td>rendering quality:</td>
+					<td>
+						<select name="quality" size="1">
+							<option>0</option>
+							<option>1</option>
+							<option selected>2</option>
+							<option>3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>image format:</td>
+					<td>
+						<input type="radio" name="format" value="PNG"> PNG<br />
+						<input type="radio" name="format" value="JPG" checked> JPG<br />
+						<input type="radio" name="format" value="GIF"> GIF<br /> 
+					</td>
+				</tr>				
+				
+				<tr>
+					<td>compression level:</td>
+					<td>
+						<select name="compression" size="1">
+							<option>0</option>
+							<option>5</option>
+							<option>10</option>
+							<option>15</option>
+							<option>20</option>
+							<option>25</option>
+							<option>30</option>
+							<option>35</option>
+							<option>40</option>
+							<option>45</option>
+							<option>50</option>
+							<option>55</option>
+							<option>60</option>
+							<option>65</option>
+							<option>70</option>
+							<option selected>75</option>
+							<option>80</option>
+							<option>85</option>
+							<option>90</option>
+							<option>95</option>
+							<option>100</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>min Y angle:</td>
+					<td><input type="text" value="-90" size="4" maxlength="4" name="minYAngle" /></td>
+				</tr>
+				<tr>
+					<td>max Y angle:</td>
+					<td><input type="text" value="90" size="4" maxlength="4" name="maxYAngle" /></td>
+				</tr>
+				<tr>
+					<td>number of steps for Y angle:</td>
+					<td><input type="text" value="11" size="4" maxlength="4" name="stepsY" /></td>
+				</tr>
+				<tr>
+					<td>min X angle:</td>
+					<td><input type="text" value="-45" size="4" maxlength="4" name="minXAngle" /></td>
+				</tr>
+				<tr>
+					<td>max X angle:</td>
+					<td><input type="text" value="45" size="4" maxlength="4" name="maxXAngle" /></td>
+				</tr>
+				<tr>
+					<td>number of steps for X angle:</td>
+					<td><input type="text" value="5" size="4" maxlength="4" name="stepsX" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="Submit"/>
+		</form>
+	</body>
+</head>
