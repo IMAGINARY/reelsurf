@@ -1,11 +1,8 @@
 #!/bin/bash/
-SCRIPTPATH=`dirname "$0"`
-cd "$SCRIPTPATH"
-cd JavaScriptAnim
+CLASSPATH=$(find /usr/lib/jsurf/ -name "*.jar" | tr '\n' ':')
 
 compression=$1
 shift
 outfile=$1
 shift
-java -cp "./bin:./lib/antlr-runtime-3.4.jar:./lib/commons-cli-1.2.jar:./lib/vecmath.jar" de.mfo.jsurfer.grid.RotationGrid $@ | convert - -quality $compression $outfile
-
+java -cp "$CLASSPATH" de.mfo.jsurf.grid.RotationGrid $@ | convert - -quality $compression $outfile
