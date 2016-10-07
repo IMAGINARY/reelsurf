@@ -49,7 +49,7 @@ exec( $cmd_line );
   <head>
     <title>Surfer2jQueryReel</title>
     <meta charset='utf-8' content='text/html' http-equiv='Content-type' />
-    <script src='js//jquery-1.7.min.js' type='text/javascript'></script>
+    <script src='js/jquery-1.7.min.js' type='text/javascript'></script>
     <script src='js/jquery.reel-min.js' type='text/javascript'></script>
   </head>
   <body>
