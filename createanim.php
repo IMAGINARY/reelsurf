@@ -45,6 +45,9 @@ $cmd_line = "bash createanim.sh {$compression} {$img_filename_abs} --size {$size
 exec( $cmd_line );
 ?>
 <!DOCTYPE html>
+<!-- $img_filename_rel=<?php echo $img_filename_rel; ?> -->
+<!-- $img_filename_abs=<?php echo $img_filename_abs; ?> -->
+<!-- $cmd_line=<?php echo $cmd_line; ?> -->
 <html>
   <head>
     <title>Surfer2jQueryReel</title>
